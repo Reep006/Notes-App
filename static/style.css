@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg, #667eea, #764ba2);
+    padding:40px 20px;
+    display:flex;
+    justify-content:center;
+}
+.container{
+    width:100%;
+    max-width:850px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+    font-size:42px;
+    font-weight:600;
+}
+.note-input{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    margin-bottom:30px;
+}
+textarea{
+    width:100%;
+    height:140px;
+    padding:18px;
+    border:none;
+    outline:none;
+    resize:none;
+    border-radius:15px;
+    background:#f5f7fb;
+    font-size:16px;
+    color:#333;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+textarea:focus{
+    background:#eef1ff;
+    box-shadow:0 0 0 3px rgba(102,126,234,0.2);
+}
+button{
+    border:none;
+    outline:none;
+    padding:12px 22px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:500;
+    transition:0.3s ease;
+}
+.note-input button{
+    width:180px;
+    background:#667eea;
+    color:white;
+}
+.note-input button:hover{
+    background:#5568d8;
+    transform:translateY(-2px);
+}
+.note{
+    background:white;
+    border-radius:20px;
+    padding:22px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    animation:fadeIn 0.3s ease;
+}
+.note p{
+    font-size:16px;
+    color:#333;
+    line-height:1.6;
+    word-wrap:break-word;
+}
+.note-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+}
+.edit-btn{
+    background:#22c55e;
+    color:white;
+}
+.edit-btn:hover{
+    background:#16a34a;
+    transform:translateY(-2px);
+}
+.delete-btn{
+    background:#ef4444;
+    color:white;
+}
+.delete-btn:hover{
+    background:#dc2626;
+    transform:translateY(-2px);
+}
+.edit-area{
+    width:100%;
+    height:120px;
+    padding:15px;
+    border:none;
+    outline:none;
+    resize:none;
+    border-radius:15px;
+    background:#f5f7fb;
+    font-size:16px;
+    margin-bottom:15px;
+}
+.edit-area:focus{
+    background:#eef1ff;
+    box-shadow:0 0 0 3px rgba(102,126,234,0.2);
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@media(max-width:768px){
+    body{
+        padding:20px 15px;
+    }
+    h1{
+        font-size:32px;
+    }
+    .note-input{
+        padding:20px;
+    }
+    textarea{
+        height:120px;
+    }
+    .note{
+        padding:18px;
+    }
+    .note-buttons{
+        flex-direction:column;
+    }
+    .note-buttons button{
+        width:100%;
+    }
+    .note-input button{
+        width:100%;
+    }
+}
